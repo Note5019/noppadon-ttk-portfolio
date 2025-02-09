@@ -1,0 +1,51 @@
+---
+import Linkedin from "../assets/icons/Linkedin.svg?raw";
+import Mail from "../assets/icons/Mail.svg?raw";
+import MapPin from "../assets/icons/MapPin.svg?raw";
+import Phone from "../assets/icons/Phone.svg?raw";
+import Github from "../assets/icons/Github.svg?raw";
+---
+
+<footer class="max-w-7xl px-4 mx-aut0">
+  <div class="h-[2px] bg-green-200"></div>
+  <div class="mt-4 flex justify-between">
+    <div class="flex justify-around gap-15">
+      <div class="flex flex-col gap-4">
+        <h2 class="font-bold text-xl">Contact</h2>
+        <div class="flex items-center gap-4">
+          <Fragment set:html={Phone} />
+          <a href="tel:+66942519347">094-251-9437</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <Fragment set:html={Mail} />
+          <a href="mailto:noppadon.ttk@gmail.com">noppadon.ttk@gmail.com</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <Fragment set:html={MapPin} />
+          <p>Bangkok, Thailand</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4">
+        <h2 class="font-bold text-xl">Social</h2>
+        <div class="flex items-center gap-4">
+          <Fragment set:html={Linkedin} />
+          <a href="https://www.linkedin.com/in/noppadon-ttk" target="_blank"
+            >noppadon-ttk</a
+          >
+        </div>
+        <div class="flex items-center gap-4">
+          <Fragment set:html={Github} />
+          <a href="https://github.com/Note5019" target="_blank">Note5019</a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col items-center justify-center text-sm text-gray-500"
+    >
+      <span>&copy; 2025 Noppadon Tongtrakoon</span>
+      <span>All rights reserved</span>
+    </div>
+  </div>
+</footer>
