@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-color-mode=dark], [data-color-mode=dark] *));
+
 .container {
   @apply max-w-7xl mx-auto px-6;
 }

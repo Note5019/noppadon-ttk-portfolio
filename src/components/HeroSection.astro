@@ -1,0 +1,46 @@
+---
+import Linkedin from "../assets/icons/Linkedin.svg?raw";
+import Mail from "../assets/icons/Mail.svg?raw";
+import Github from "../assets/icons/Github.svg?raw";
+---
+
+<section class="hero-section py-12 grid grid-cols-2 gap-10">
+    <div class="flex flex-col justify-end gap-12">
+        <span class="font-bold text-8xl italic">Full stack / Backend Developer</span>
+        <div class="font-bold text-3xl">Hello, World!</div>
+        <div>
+            Software Engineer with 1 year of experience in full-stack
+            development <br />
+            using Vue3, Nuxt, Tailwind, and PHP Laravel framework, <br />
+            4 years of experience in backend development, <br />
+            IoT-data management using PHP Laravel on AWS Cloud services <br />
+            and Kubernetes and deploying project to Cloud service <br />
+            like Laravel Forge, AWS, Azure services. - Learn more
+        </div>
+        <div>
+            <div class="font-extrabold text-7xl tracking-wide">Noppadon</div>
+            <div class="font-extrabold text-7xl tracking-wide">Tongtrakoon</div>
+        </div>
+    </div>
+    <div
+        class="w-[480px] h-[480px] bg-green-700"
+        style="clip-path: circle(45.5% at 53% 53%);"
+    >
+    </div>
+    <div class="col-span-2 flex gap-4">
+        <div class="font-normal">Contact : </div>
+            <Fragment set:html={Mail} />
+            <Fragment set:html={Linkedin} />
+            <Fragment set:html={Github} />
+    </div>
+    <!-- <img style="clip-path: circle(45.5% at 53% 53%);" src="/images/profile.jpeg"/> -->
+</section>
+
+<style>
+    .hero-section {
+        height: (100dvh - 56px);
+        min-height: 560px;
+        max-height: 1000px;
+        /* background-color: aquamarine; */
+    }
+</style>
