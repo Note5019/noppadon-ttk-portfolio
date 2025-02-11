@@ -1,0 +1,77 @@
+---
+const { "popover-target": target } = Astro.props;
+---
+
+<slot />
+
+<astro-popover data-target={target} class="absolute">
+    <div
+        data-popover
+        id={target}
+        role="tooltip"
+        class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+    >
+        <slot name="popover" />
+        <div data-popper-arrow></div>
+    </div>
+</astro-popover>
+
+<script>
+    import { Popover } from "flowbite";
+    import type { PopoverOptions, PopoverInterface } from "flowbite";
+    import type { InstanceOptions } from "flowbite";
+
+    class AstroPopOver extends HTMLElement {
+        connectedCallback() {
+            // set the popover content element
+            const $targetEl: HTMLElement = document.getElementById(
+                this.dataset.target as string,
+            );
+
+            // set the element that trigger the popover using hover or click
+            const $triggerEl: HTMLElement =
+                document.getElementById("popoverButton");
+
+            // options with default values
+            const options: PopoverOptions = {
+                placement: "left",
+                triggerType: "hover",
+                offset: 100,
+                // onHide: () => {
+                //     console.log("popover is shown");
+                // },
+                // onShow: () => {
+                //     console.log("popover is hidden");
+                // },
+                // onToggle: () => {
+                //     console.log("popover is toggled");
+                // },
+            };
+
+            // instance options object
+            const instanceOptions: InstanceOptions = {
+                id: "popoverContent",
+                override: true,
+            };
+
+            if ($targetEl) {
+                /*
+                 * targetEl: required
+                 * triggerEl: required
+                 * options: optional
+                 * instanceOptions: optional
+                 */
+                const popover: PopoverInterface = new Popover(
+                    $targetEl,
+                    $triggerEl,
+                    options,
+                    instanceOptions,
+                );
+
+                // popover.show();
+            }
+        }
+    }
+
+    customElements.define("astro-popover", AstroPopOver);
+</script>
