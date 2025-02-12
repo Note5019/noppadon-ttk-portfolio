@@ -1,0 +1,28 @@
+---
+import WorkWithCard from "../components/WorkWithCard.astro";
+
+const skills = [
+    {"path": "../images/companies/netcube.png", "alt": "Netcube - Business Application Development", "link": "https://www.netcube.co.th/th"},
+    {"path": "../images/companies/boda.svg", "alt": "BODA - Technology & Consultancy", "link": "https://bo-da.co/"},
+    {"path": "../images/companies/mywawa.png", "alt": "Mywawa - Ecommerce platform", "link": "https://www.mywawa.me/"},
+    {"path": "../images/companies/wawa-x.jpg", "alt": "Wawa-x - Digital transformation consultancy", "link": "https://www.wawa-x.com/"},
+];
+---
+
+<section class="hero-section flex flex-col justify-center items-center py-6">
+    <div class="font-extrabold text-5xl md:text-6xl italic mb-6">Worked with</div>
+
+    <div class="max-w-2xl flex flex-wrap gap-6 items-center justify-center">
+        {
+            skills.map((skill) => {
+                return (
+                    <WorkWithCard
+                        path={skill.path}
+                        alt={skill.alt}
+                        link={skill.link}
+                    />
+                );
+            })
+        }
+    </div>
+</section>

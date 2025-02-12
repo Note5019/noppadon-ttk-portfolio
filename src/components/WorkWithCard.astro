@@ -1,0 +1,11 @@
+---
+const { path, alt, link } = Astro.props;
+---
+
+<a
+    href={link}
+    target="_blank"
+    class="w-30 h-30 border border-gray-100 rounded-xl bg-white p-3 flex items-center"
+>
+    <img src={path} alt={alt} class="w-full rounded-lg" />
+</a>
