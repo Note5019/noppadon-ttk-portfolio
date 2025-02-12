@@ -1,6 +1,11 @@
 ---
-const { path, alt } = Astro.props;
+const { path, alt, link } = Astro.props;
 ---
-<div class="w-20 h-20 border border-gray-100 rounded-lg bg-white p-3 flex items-center">
-    <img src={path} alt={alt} class="w-full"/>
-</div>
+
+<a
+    href={link}
+    target="_blank"
+    class="w-20 h-20 border border-gray-100 rounded-lg bg-white p-3 flex items-center"
+>
+    <img src={path} alt={alt} class="w-full" />
+</a>

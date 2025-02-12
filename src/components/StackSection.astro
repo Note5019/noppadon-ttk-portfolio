@@ -2,22 +2,22 @@
 import SkillCard from "../components/SkillCard.astro";
 
 const skills = [
-    {"path": "../images/skills/laravel.png", "alt": "laravel"},
-    {"path": "../images/skills/php-icon.png", "alt": "php"},
-    {"path": "../images/skills/mysql.png", "alt": "mysql"},
-    {"path": "../images/skills/html.png", "alt": "html"},
-    {"path": "../images/skills/css.png", "alt": "css"},
-    {"path": "../images/skills/typescript.png", "alt": "typescript"},
-    {"path": "../images/skills/vue.png", "alt": "vue"},
-    {"path": "../images/skills/nuxt.svg", "alt": "nuxt"},
-    {"path": "../images/skills/tailwind.png", "alt": "tailwind"},
-    {"path": "../images/skills/aws-icon.webp", "alt": "aws"},
-    {"path": "../images/skills/azure.png", "alt": "azure"},
-    {"path": "../images/skills/forge-laravel.png", "alt": "forge"},
-    {"path": "../images/skills/docker.png", "alt": "docker"},
-    {"path": "../images/skills/postman.webp", "alt": "postman"},
-    {"path": "../images/skills/bruno.png", "alt": "bruno"},
-    {"path": "../images/skills/git.png", "alt": "git"},
+    {"path": "../images/skills/laravel.png", "alt": "Laravel", "link": "https://laravel.com/"},
+    {"path": "../images/skills/php-icon.png", "alt": "PHP", "link": "https://www.php.net/"},
+    {"path": "../images/skills/mysql.png", "alt": "Mysql", "link": "https://www.mysql.com/"},
+    {"path": "../images/skills/html.png", "alt": "HTML", "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"},
+    {"path": "../images/skills/css.png", "alt": "Css", "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"},
+    {"path": "../images/skills/typescript.png", "alt": "Typescript", "link": "https://www.typescriptlang.org/"},
+    {"path": "../images/skills/vue.png", "alt": "Vue", "link": "https://vuejs.org/"},
+    {"path": "../images/skills/nuxt.svg", "alt": "Nuxt", "link": "https://nuxt.com/"},
+    {"path": "../images/skills/tailwind.png", "alt": "Tailwind", "link": "https://tailwindcss.com/"},
+    {"path": "../images/skills/aws-icon.webp", "alt": "Amazon Web Services", "link": "https://aws.amazon.com/about-aws"},
+    {"path": "../images/skills/azure.png", "alt": "Azure", "link": "https://azure.microsoft.com/en-us/"},
+    {"path": "../images/skills/forge-laravel.png", "alt": "Forge, server management.", "link": "https://forge.laravel.com/"},
+    {"path": "../images/skills/docker.png", "alt": "Docker, container application development.", "link": "https://www.docker.com/"},
+    {"path": "../images/skills/postman.webp", "alt": "Postman, api client.", "link": "https://www.postman.com/"},
+    {"path": "../images/skills/bruno.png", "alt": "Bruno, api client.", "link": "https://www.usebruno.com/"},
+    {"path": "../images/skills/git.png", "alt": "Git, version control.", "link": "https://git-scm.com/"},
 
     // {"path": "../images/skills/python.webp", "alt": "python"},
     // {"path": "../images/skills/aws-amplify.png", "alt": "aws"},
@@ -33,7 +33,7 @@ const skills = [
     <div class="max-w-2xl flex flex-wrap gap-6 items-center justify-center">
         {
             skills.map((skill) => {
-                return <SkillCard path={skill.path} alt={skill.alt} />;
+                return <SkillCard path={skill.path} alt={skill.alt} link={skill.link} />;
             })
         }
     </div>
