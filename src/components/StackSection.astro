@@ -1,0 +1,40 @@
+---
+import SkillCard from "../components/SkillCard.astro";
+
+const skills = [
+    {"path": "../images/skills/laravel.png", "alt": "laravel"},
+    {"path": "../images/skills/php-icon.png", "alt": "php"},
+    {"path": "../images/skills/mysql.png", "alt": "mysql"},
+    {"path": "../images/skills/html.png", "alt": "html"},
+    {"path": "../images/skills/css.png", "alt": "css"},
+    {"path": "../images/skills/typescript.png", "alt": "typescript"},
+    {"path": "../images/skills/vue.png", "alt": "vue"},
+    {"path": "../images/skills/nuxt.svg", "alt": "nuxt"},
+    {"path": "../images/skills/tailwind.png", "alt": "tailwind"},
+    {"path": "../images/skills/aws-icon.webp", "alt": "aws"},
+    {"path": "../images/skills/azure.png", "alt": "azure"},
+    {"path": "../images/skills/forge-laravel.png", "alt": "forge"},
+    {"path": "../images/skills/docker.png", "alt": "docker"},
+    {"path": "../images/skills/postman.webp", "alt": "postman"},
+    {"path": "../images/skills/bruno.png", "alt": "bruno"},
+    {"path": "../images/skills/git.png", "alt": "git"},
+
+    // {"path": "../images/skills/python.webp", "alt": "python"},
+    // {"path": "../images/skills/aws-amplify.png", "alt": "aws"},
+    // {"path": "../images/skills/kubernates.png", "alt": "kubernates"},
+];
+---
+
+<section class="hero-section flex flex-col justify-center items-center pb-6">
+    <div class="font-extrabold text-5xl md:text-6xl italic mb-6">
+        Skills
+    </div>
+
+    <div class="max-w-2xl flex flex-wrap gap-6 items-center justify-center">
+        {
+            skills.map((skill) => {
+                return <SkillCard path={skill.path} alt={skill.alt} />;
+            })
+        }
+    </div>
+</section>

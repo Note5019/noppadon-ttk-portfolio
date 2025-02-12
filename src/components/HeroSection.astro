@@ -52,10 +52,10 @@ import Popover from "../components/Popover.astro";
             </div>
         </div>
     </div>
-    <div class="col-span-2 lg:col-span-1 flex gap-4">
+    <div class="col-span-2 lg:col-span-1 flex gap-4 items-center">
         <div class="font-normal">Contact :</div>
         <Popover popover-target="popover-email">
-            <div data-popover-target="popover-email">
+            <div data-popover-target="popover-email" class="w-8 h-8">
                 <a href="mailto:noppadon.ttk@gmail.com" class="cursor-pointer">
                     <Fragment set:html={Mail} />
                 </a>
@@ -76,7 +76,7 @@ import Popover from "../components/Popover.astro";
         </Popover>
 
         <Popover popover-target="popover-linkedin">
-            <div data-popover-target="popover-linkedin">
+            <div data-popover-target="popover-linkedin" class="w-8 h-8">
                 <a
                     href="https://www.linkedin.com/in/noppadon-ttk"
                     target="_blank"
@@ -105,7 +105,7 @@ import Popover from "../components/Popover.astro";
         </Popover>
 
         <Popover popover-target="popover-github">
-            <div data-popover-target="popover-github">
+            <div data-popover-target="popover-github" class="w-8 h-8">
                 <a
                     href="https://github.com/Note5019"
                     target="_blank"
