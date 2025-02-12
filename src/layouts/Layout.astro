@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
-import { ColorMode } from 'astro-color-mode';
+import { ColorMode } from "astro-color-mode";
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -10,7 +12,7 @@ import { ColorMode } from 'astro-color-mode';
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>{ title } | Noppadon</title>
     <ColorMode />
   </head>
   <body class="relative">
